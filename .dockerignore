@@ -1,0 +1,15 @@
+# Arquivos gerados durante o desenvolvimento local
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Arquivos e diretórios específicos do ambiente de desenvolvimento local
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Arquivos e diretórios de caches
+.DS_Store
+.cache
