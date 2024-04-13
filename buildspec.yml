@@ -21,4 +21,4 @@ phases:
       - echo 'Pushing Docker image to ECR ...'
       - docker push $REPOSITORY/$IMAGE:$IMAGE_TAG
       - echo 'Updating ECS service ...'
-      # - aws ecs update-service --cluster $CLUSTER_NAME --service $SERVICE_NAME --force-new-deployment
+      - aws ecs update-service --cluster $CLUSTER_NAME --service $SERVICE_NAME --force-new-deployment
