@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Logo from "../../assets/logo.svg";
 
@@ -9,6 +10,20 @@ const Header = ({ ...props }) => {
   const [buttonLoginSelected, setButtonLoginSelected] = useState(false);
   const [buttonRegisterSelected, setButtonRegisterSelected] = useState(true);
 
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate("/");
+  };
+
+  const goToLogin = () => {
+    navigate("/login");
+  };
+
+  const goToRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <HeaderComponent {...props}>
       <LogoDiv>
@@ -17,7 +32,7 @@ const Header = ({ ...props }) => {
       </LogoDiv>
       <ListLink>
         <li>
-          <button>Home</button>
+          <button onClick={goToHome}>Home</button>
         </li>
         <li>
           <button>Chat</button>
@@ -28,6 +43,7 @@ const Header = ({ ...props }) => {
           onClick={() => {
             setButtonLoginSelected(true);
             setButtonRegisterSelected(false);
+            goToLogin();
           }}
           style={{
             backgroundColor: buttonLoginSelected ? "#7f56d9" : "transparent",
@@ -41,6 +57,7 @@ const Header = ({ ...props }) => {
           onClick={() => {
             setButtonRegisterSelected(true);
             setButtonLoginSelected(false);
+            goToRegister();
           }}
           style={{
             backgroundColor: buttonRegisterSelected ? "#7f56d9" : "transparent",
