@@ -1,12 +1,13 @@
 import React from "react";
 
-import Header from "../../components/Header";
+import Layout from "../../components/Layout";
 
 const Login = () => {
   return (
     <>
-      <Header></Header>
-      <h2>Login</h2>
+      <Layout isLoginPage={true}>
+        <h2>Login</h2>
+      </Layout>
     </>
   );
 };

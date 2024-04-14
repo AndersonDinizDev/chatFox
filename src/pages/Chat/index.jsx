@@ -2,14 +2,14 @@ import React from "react";
 
 import Layout from "../../components/Layout";
 
-const Register = () => {
+const Chat = () => {
   return (
     <>
-      <Layout isRegisterPage={true}>
-        <h2>Register</h2>
+      <Layout>
+        <h2>Chat</h2>
       </Layout>
     </>
   );
 };
 
-export default Register;
+export default Chat;

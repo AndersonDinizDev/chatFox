@@ -42,15 +42,24 @@ export const ButtonsDiv = styled.div`
   gap: 0.5rem;
   align-items: center;
   margin-left: auto;
+`;
 
-  button {
-    padding: 10px 18px;
-    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
+export const Button = styled.button`
+  padding: 10px 18px;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  cursor: pointer;
+  background-color: ${(props) =>
+    props.isSelected ? "#7f56d9" : "transparent"};
+  color: ${(props) => (props.isSelected ? "#fff" : "#475467")};
+  border: ${(props) => (props.isSelected ? "1px solid #7f56d9" : "none")};
+
+  &:hover {
+    background-color: #7f56d9;
     color: #fff;
-    cursor: pointer;
+    border: 1px solid #7f56d9;
   }
 `;
